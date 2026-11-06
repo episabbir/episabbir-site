@@ -68,7 +68,7 @@ POSTS = [
         title='What does vaccine coverage really mean?',
         summary='You often hear that "85% of children are vaccinated." Here is what that number counts, what it leaves out, and why the goal is 95%.',
         read='About 2 minutes', date='November 5, 2026',
-        image='post3-vaccine-coverage.png', image_alt='100 dots for 100 children, 76 filled in teal, with the 95% goal marked',
+        image='post3-vaccine-coverage.jpg', image_alt='Illustration of a diverse group of smiling school children, most with a teal shield showing they are protected',
         body=[
             ('p', 'In my work, I look at one number a lot: vaccine coverage. It answers one question. Out of all the children of a certain age, how many got a certain vaccine?'),
             ('p', 'Say a town has 100 seven-year-olds, and 90 of them got both measles doses. Coverage is 90 out of 100, or 90%.'),
