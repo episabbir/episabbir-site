@@ -40,7 +40,7 @@ POSTS = [
         title='How to read a health number in the news',
         summary='Health news is full of numbers like "cases are up" or "the risk doubles." Four easy questions help you see what a number really means.',
         read='About 2 minutes', date='November 5, 2026',
-        image='post2-health-numbers.png', image_alt='A newspaper headline "Risk doubles!" with a magnifying glass showing 1 in 10,000 becomes 2 in 10,000',
+        image='post2-health-numbers.jpg', image_alt='Illustration of a man at a kitchen table looking at a newspaper chart through a magnifying glass',
         body=[
             ('p', 'Health news is full of numbers. A number feels exact, but it only tells part of the story. Ask these four questions.'),
             ('h', '1. Out of how many?'),
