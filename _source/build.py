@@ -160,7 +160,7 @@ home = f'''<div class="wrap">
 <a class="btn btn-primary" href="about.html">About me {ic('arrow')}</a>
 </div>
 </div>
-<div class="hero-photo"><img src="images/headshot.jpg" alt="Md Sabbir Ahmed"></div>
+<div class="hero-photo"><img src="images/headshot.jpg?v={VER}" alt="Md Sabbir Ahmed"></div>
 </section>
 
 <section class="section" aria-labelledby="feat-title">
@@ -293,7 +293,7 @@ skill_items = ''.join(f'<div class="skill">{logo(f, fb, "skill-logo")}<span clas
 
 about = f'''<div class="wrap">
 <section class="summary" aria-labelledby="about-title">
-<img src="images/headshot.jpg" alt="Md Sabbir Ahmed">
+<img src="images/headshot.jpg?v={VER}" alt="Md Sabbir Ahmed">
 <div class="summary-text">
 <h1 id="about-title">About me</h1>
 <p>As an epidemiologist at the Ministry of Health, Government of Saskatchewan, I work on childhood immunization surveillance. Since 2024, I have been measuring vaccine coverage, reporting to the Public Health Agency of Canada and turning data into briefing notes that support decisions.</p>
