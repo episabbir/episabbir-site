@@ -1,3 +1,5 @@
+import time as _t
+VER=str(int(_t.time()))
 import json, html, shutil, os, re
 from urllib.parse import quote
 
@@ -96,7 +98,7 @@ def page(title, desc, current, body, script=''):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v={VER}">
 </head>
 <body>
 {nav(current)}
@@ -123,7 +125,7 @@ def post_url(p): return f"post-{p['slug']}.html"
 def post_img(p, cls='post-img'):
     pill, bg, fg = THEME_STYLE[p['theme']]
     return (f'<div class="{cls}" style="background:{bg};color:{fg}">{ic("image")}'
-            f'<img src="images/blog/{p["image"]}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
+            f'<img src="images/blog/{p["image"]}?v={VER}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
 def post_card(p, extra_cls='', data=True):
     pill = THEME_STYLE[p['theme']][0]
     d = f' data-cat="{E(p["theme"])}"' if data else ''
