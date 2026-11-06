@@ -82,7 +82,7 @@ FOOTER = f'''<footer class="contact" id="contact">
 <a href="https://www.linkedin.com/in/sabbirepidemiologist/">{logo('linkedin.png', 'in', 'sm')}LinkedIn</a>
 </div>
 <div class="small-print footnotes">
-<p>The views expressed on this site are my own and do not represent the views or positions of my employer, the Government of Saskatchewan.</p>
+<p>The views expressed on this site are my own and do not represent the views or positions of my employer.</p>
 <p>© 2026 Md Sabbir Ahmed · Built to WCAG 2.1 AA accessibility standards</p>
 </div>
 </div>
