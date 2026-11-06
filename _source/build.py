@@ -1,4 +1,4 @@
-import json, html, shutil, os
+import json, html, shutil, os, re
 from urllib.parse import quote
 
 OUT = 'site'
@@ -52,7 +52,24 @@ def nav(current):
         cur = ' aria-current="page"' if label == current else ''
         cls = ' class="cta"' if label.startswith('Want') else ''
         items.append(f'<li><a href="{href}"{cur}{cls}>{E(label)}</a></li>')
-    return '<nav class="site-nav" aria-label="Main"><ul>' + ''.join(items) + '</ul></nav>'
+    return ('<nav class="site-nav" aria-label="Main">'
+            f'<div class="nav-bar"><span class="nav-here">{E(current)}</span>'
+            '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">'
+            '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button></div>'
+            '<ul id="main-menu">' + ''.join(items) + '</ul></nav>')
+
+NAV_JS = """<script>
+(function(){var b=document.querySelector('.menu-toggle'),n=document.querySelector('.site-nav');
+if(b){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});}})();
+</script>"""
+
+def external_new_tab(html_text):
+    # every link to another website opens in a new tab
+    def fix(m):
+        tag = m.group(0)
+        if 'target=' in tag: return tag
+        return tag[:-1] + ' target="_blank" rel="noopener">'
+    return re.sub(r'<a\b[^>]*href="https?://[^"]*"[^>]*>', fix, html_text)
 
 FOOTER = f'''<footer class="contact" id="contact">
 <div class="wrap">
@@ -72,7 +89,7 @@ FOOTER = f'''<footer class="contact" id="contact">
 </footer>'''
 
 def page(title, desc, current, body, script=''):
-    return f'''<!doctype html>
+    out = f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -88,9 +105,11 @@ def page(title, desc, current, body, script=''):
 </main>
 {FOOTER}
 {script}
+{NAV_JS}
 </body>
 </html>
 '''
+    return external_new_tab(out)
 
 # ---------- BLOG DATA (newest first; first = featured) ----------
 from blog_posts import POSTS
@@ -289,7 +308,7 @@ about = f'''<div class="wrap">
 <section class="section" style="padding-top:0" aria-labelledby="work-title">
 <h2 class="section-title" id="work-title">Work</h2>
 <p class="section-sub">Click a tile to see my role there.</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr))">{job_tiles}</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr))">{job_tiles}</div>
 {''.join(dialog(j) for j in jobs)}
 </section>
 
