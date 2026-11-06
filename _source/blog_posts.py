@@ -1,4 +1,4 @@
-# Blog posts for sabbirepi.ca, newest first. The first one is the featured post.
+# Blog posts for episabbir.ca, newest first. The first one is the featured post.
 # Source: Claude doc "sabbirepi.ca blog: first three posts" (approved Nov 5, 2026).
 # Body blocks: ('h', text) subheading, ('p', text) paragraph, ('ul', [items]) bullet list.
 
