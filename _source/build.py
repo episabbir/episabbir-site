@@ -90,7 +90,9 @@ FOOTER = f'''<footer class="contact" id="contact">
 </div>
 </footer>'''
 
-def page(title, desc, current, body, script=''):
+SITE_URL = 'https://episabbir.github.io/episabbir-site/'  # change to https://episabbir.ca/ once the domain is live
+
+def page(title, desc, current, body, script='', og_img='images/og-card.png'):
     out = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -98,6 +100,14 @@ def page(title, desc, current, body, script=''):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Md Sabbir Ahmed">
+<meta property="og:title" content="{E(title)}">
+<meta property="og:description" content="{E(desc)}">
+<meta property="og:image" content="{SITE_URL}{og_img}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/style.css?v={VER}">
 </head>
 <body>
@@ -523,7 +533,7 @@ for i, p in enumerate(POSTS):
 </article>
 {('<section class="section" aria-labelledby="more-title"><h2 class="section-title" id="more-title">More posts</h2><div class="grid">' + more + '</div></section>') if more else ''}
 </div>'''
-    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art))
+    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=f"images/blog/{p['image']}"))
 
 # ---------- WORK WITH ME ----------
 MAIL = 'mailto:sabbir.epidemiologist@gmail.com'
@@ -558,7 +568,7 @@ work = f'''<div class="wrap">
 <p class="indep"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span class="sr-only">Note: </span>My collaboration and mentoring work is independent of my current employment.</p>
 </section>
 </div>'''
-open(f'{OUT}/work.html', 'w').write(page('Work with me | Md Sabbir Ahmed', 'Data analysis, manuscript writing and research collaboration with Md Sabbir Ahmed.', 'Want to work with me?', work))
+open(f'{OUT}/work.html', 'w').write(page('Work with me | Md Sabbir Ahmed', 'Research collaboration and mentoring with Md Sabbir Ahmed.', 'Want to work with me?', work))
 
 
 # ---------- GALLERY ----------
