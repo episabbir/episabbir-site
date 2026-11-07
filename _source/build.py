@@ -44,6 +44,16 @@ def logo(file, fallback, size=''):
     return (f'<span class="logo {size}"><span class="fallback">{fallback}</span>'
             f'<img src="images/logos/{file}" alt="" onerror="{onerr}"></span>')
 
+
+PERSON_LD = """<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Md Sabbir Ahmed","jobTitle":"Epidemiologist",
+"url":"https://episabbir.ca/","image":"https://episabbir.ca/images/headshot.jpg",
+"address":{"@type":"PostalAddress","addressRegion":"SK","addressCountry":"CA"},
+"alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Saskatchewan"},{"@type":"CollegeOrUniversity","name":"Patuakhali Science and Technology University"}],
+"knowsAbout":["Epidemiology","Childhood immunization","Population health","SAS","R"],
+"sameAs":["https://www.linkedin.com/in/sabbirepidemiologist/"]}
+</script>"""
+
 # ---------- shared parts ----------
 NAV = [('index.html', 'Home'), ('about.html', 'About me'), ('research.html', 'My Research'),
        ('blog.html', 'Blog'), ('work.html', 'Want to work with me?'), ('gallery.html', 'Gallery')]
@@ -92,7 +102,7 @@ FOOTER = f'''<footer class="contact" id="contact">
 
 SITE_URL = 'https://episabbir.ca/'
 
-def page(title, desc, current, body, script='', og_img='images/og-card.png'):
+def page(title, desc, current, body, script='', og_img='images/og-card.png', path=''):
     out = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -107,6 +117,8 @@ def page(title, desc, current, body, script='', og_img='images/og-card.png'):
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{SITE_URL}{og_img}">
+<meta property="og:url" content="{SITE_URL}{path}">
+<link rel="canonical" href="{SITE_URL}{path}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/style.css?v={VER}">
 </head>
@@ -199,7 +211,7 @@ home = f'''<div class="wrap">
 </div>'''
 
 open(f'{OUT}/index.html', 'w').write(page(
-    'Md Sabbir Ahmed | Epidemiologist', 'Md Sabbir Ahmed, epidemiologist in Saskatchewan, Canada.', 'Home', home))
+    'Md Sabbir Ahmed | Epidemiologist', 'Md Sabbir Ahmed is an epidemiologist in Saskatchewan, Canada, working on childhood immunization surveillance and population health research.', 'Home', home, PERSON_LD))
 
 # ---------- ABOUT ----------
 edu = [
@@ -367,7 +379,7 @@ document.querySelectorAll('dialog').forEach(function(d){
   d.addEventListener('click',function(e){if(e.target===d)d.close();});
 });
 </script>'''
-open(f'{OUT}/about.html', 'w').write(page('About me | Md Sabbir Ahmed', 'Education, work, awards and skills of Md Sabbir Ahmed.', 'About me', about, about_js))
+open(f'{OUT}/about.html', 'w').write(page('About me | Md Sabbir Ahmed', 'About Md Sabbir Ahmed, epidemiologist: education at the University of Saskatchewan, work in public health, skills in SAS and R, awards and grants.', 'About me', about, about_js, path='about'))
 
 # ---------- RESEARCH ----------
 pubs = sorted(json.load(open('pubs.json')), key=lambda p: -p['n'])
@@ -441,7 +453,7 @@ res_js = '''<script>
   lead.addEventListener('change',apply);
 })();
 </script>'''
-open(f'{OUT}/research.html', 'w').write(page('My Research | Md Sabbir Ahmed', 'Publications and research of Md Sabbir Ahmed.', 'My Research', research, res_js))
+open(f'{OUT}/research.html', 'w').write(page('My Research | Md Sabbir Ahmed', '38 peer-reviewed publications by epidemiologist Md Sabbir Ahmed on mental health, maternal and child health, chronic disease, sleep, and water and hygiene.', 'My Research', research, res_js, path='research'))
 
 open(f'{OUT}/images/logos/README.txt', 'w').write('''Put logo image files in this folder with exactly these names (PNG, square works best).
 Until a file is here, the site shows a small text badge in its place.
@@ -503,7 +515,7 @@ blog_js = '''<script>
   });});
 })();
 </script>'''
-open(f'{OUT}/blog.html', 'w').write(page('Blog | Md Sabbir Ahmed', 'Public health in plain language by Md Sabbir Ahmed.', 'Blog', blog, blog_js))
+open(f'{OUT}/blog.html', 'w').write(page('Blog | Md Sabbir Ahmed', 'Public health explained in plain language: health news, how to read health numbers, and career tips, written by epidemiologist Md Sabbir Ahmed.', 'Blog', blog, blog_js, path='blog'))
 
 # ---------- ONE PAGE PER POST ----------
 def body_html(blocks):
@@ -533,7 +545,7 @@ for i, p in enumerate(POSTS):
 </article>
 {('<section class="section" aria-labelledby="more-title"><h2 class="section-title" id="more-title">More posts</h2><div class="grid">' + more + '</div></section>') if more else ''}
 </div>'''
-    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=f"images/blog/{p['image']}"))
+    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=f"images/blog/{p['image']}", path=post_url(p)[:-5]))
 
 # ---------- WORK WITH ME ----------
 MAIL = 'mailto:sabbir.epidemiologist@gmail.com'
@@ -568,7 +580,7 @@ work = f'''<div class="wrap">
 <p class="indep"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span class="sr-only">Note: </span>My collaboration and mentoring work is independent of my current employment.</p>
 </section>
 </div>'''
-open(f'{OUT}/work.html', 'w').write(page('Work with me | Md Sabbir Ahmed', 'Research collaboration and mentoring with Md Sabbir Ahmed.', 'Want to work with me?', work))
+open(f'{OUT}/work.html', 'w').write(page('Work with me | Md Sabbir Ahmed', 'Work with epidemiologist Md Sabbir Ahmed on research collaboration or get research mentoring.', 'Want to work with me?', work, path='work'))
 
 
 # ---------- GALLERY ----------
@@ -587,4 +599,12 @@ gallery = f'''<div class="wrap">
 </div>
 </section>
 </div>'''
-open(f'{OUT}/gallery.html', 'w').write(page('Gallery | Md Sabbir Ahmed', 'Photos from conferences, presentations, fieldwork and awards.', 'Gallery', gallery))
+open(f'{OUT}/gallery.html', 'w').write(page('Gallery | Md Sabbir Ahmed', 'Photos from conferences, presentations, fieldwork and awards.', 'Gallery', gallery, path='gallery'))
+
+
+# ---------- SEO: sitemap + robots ----------
+import datetime as _dt, glob as _glob, os as _os
+_today = _dt.date.today().isoformat()
+_pages = [''] + [_os.path.basename(f)[:-5] for f in sorted(_glob.glob(f'{OUT}/*.html')) if not f.endswith(('index.html','404.html','gallery.html'))]
+open(f'{OUT}/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{SITE_URL}{p}</loc><lastmod>{_today}</lastmod></url>\n' for p in _pages) + '</urlset>\n')
+open(f'{OUT}/robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}sitemap.xml\n')
