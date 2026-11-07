@@ -90,7 +90,7 @@ FOOTER = f'''<footer class="contact" id="contact">
 </div>
 </footer>'''
 
-SITE_URL = 'https://episabbir.github.io/episabbir-site/'  # change to https://episabbir.ca/ once the domain is live
+SITE_URL = 'https://episabbir.ca/'
 
 def page(title, desc, current, body, script='', og_img='images/og-card.png'):
     out = f'''<!doctype html>
