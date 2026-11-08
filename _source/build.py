@@ -483,7 +483,7 @@ blog = f'''<div class="wrap">
 <div class="summary-text">
 <span class="brand-kicker">Blog</span>
 <h1 id="blog-title" class="brand-title">{ic('stopwatch')}2-Minute Public Health</h1>
-<p class="brand-tag">Plain-language public health you can read in 2 minutes. By Sabbir Ahmed, epidemiologist.</p>
+<p class="brand-tag">Public health insights you can read in 2 minutes. By Sabbir Ahmed, epidemiologist.</p>
 <p>I write about global health hot topics, how to read health data, public health essentials, and careers and higher study in public health.</p>
 </div>
 </section>
