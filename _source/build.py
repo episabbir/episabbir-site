@@ -90,9 +90,9 @@ FOOTER = f'''<footer class="contact" id="contact">
 <p>Questions, collaborations or a data project in mind? Send me a note.</p>
 </div>
 <div class="contact-links">
-<a href="mailto:sabbir.epidemiologist@gmail.com">{ic('mail')}sabbir.epidemiologist@gmail.com</a>
-<a href="https://www.linkedin.com/in/sabbirepidemiologist/">{logo('linkedin.png', 'in', 'sm')}LinkedIn</a>
-<a href="https://orcid.org/0000-0002-7663-2181">{logo('orcid.png', 'iD', 'sm')}ORCID</a>
+<a class="icon-only" href="mailto:sabbir.epidemiologist@gmail.com" aria-label="Email me: sabbir.epidemiologist@gmail.com" title="sabbir.epidemiologist@gmail.com">{ic('mail')}</a>
+<a class="icon-only" href="https://www.linkedin.com/in/sabbirepidemiologist/" aria-label="LinkedIn profile" title="LinkedIn">{logo('linkedin.png', 'in', 'sm')}</a>
+<a class="icon-only" href="https://orcid.org/0000-0002-7663-2181" aria-label="ORCID profile" title="ORCID">{logo('orcid.png', 'iD', 'sm')}</a>
 </div>
 <div class="small-print footnotes">
 <p>The views expressed on this site are my own and do not represent the views or positions of my employer.</p>

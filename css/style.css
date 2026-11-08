@@ -86,6 +86,11 @@ h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;margin:0}
 .contact-links{display:flex;flex-wrap:wrap;gap:12px}
 .contact-links a{display:inline-flex;align-items:center;gap:10px;background:#1d4a46;color:#fff;text-decoration:none;padding:12px 18px;border-radius:999px;font-weight:500}
 .contact-links a:hover{background:#245a55;color:#fff}
+.contact-links a.icon-only{width:56px;height:56px;padding:0;justify-content:center;border-radius:50%}
+.contact-links a.icon-only svg{width:24px;height:24px}
+.contact-links a.icon-only .logo{width:30px;height:30px;background:transparent;border-radius:0;overflow:visible}
+.contact-links a.icon-only .logo img{background:transparent;padding:0}
+.contact-links a.icon-only .logo .fallback{display:none}
 .small-print{width:100%;font-size:13px;color:#9fbdb8}
 .footnotes{border-top:1px solid #1d4a46;padding-top:16px;display:flex;flex-direction:column;gap:6px}
 .footnotes p{margin:0;color:#f2c94c;font-size:13px}
@@ -327,7 +332,8 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
   .fb-strip-cta{width:100%;justify-content:center}
   .contact{margin:28px auto 16px;border-radius:22px}
   .contact h2{font-size:26px}
-  .contact-links,.contact-links a{width:100%}
+  .contact-links{width:100%}
+  .contact-links a:not(.icon-only){width:100%}
   .contact-links a{justify-content:center;word-break:break-all}
   .offer{padding:22px}
   .offer h2{font-size:22px}
