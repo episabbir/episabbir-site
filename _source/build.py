@@ -12,6 +12,7 @@ E = html.escape
 # ---------- icons (generic stroke icons) ----------
 P = {
  'image': '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 16-5-5-9 9"/>',
+ 'stopwatch': '<circle cx="12" cy="14" r="8"/><path d="M12 10v4l2.5 2.5M10 2h4M12 2v4M19 6l1.5-1.5"/>',
  'mail': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
  'link': '<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
  'arrow': '<path d="M5 12h14M13 6l6 6-6 6"/>',
@@ -196,7 +197,7 @@ home = f'''<div class="wrap">
 
 <section class="section" style="padding-top:0" id="latest" aria-labelledby="latest-title">
 <div class="row-head">
-<h2 class="section-title" id="latest-title">Latest posts</h2>
+<div><span class="brand-kicker">Latest posts</span><h2 class="section-title brand-title" id="latest-title">{ic('stopwatch')}2-Minute Public Health</h2></div>
 <a href="blog.html" style="font-weight:700">See all posts {ic('arrow')}</a>
 </div>
 <div class="grid">{post_cards}</div>
@@ -480,8 +481,10 @@ blog_cards = ''.join(post_card(p, 'blog-card') for p in POSTS)
 blog = f'''<div class="wrap">
 <section class="summary" aria-labelledby="blog-title">
 <div class="summary-text">
-<h1 id="blog-title">Blog</h1>
-<p>Public health in plain language. I write about global health hot topics, how to read health data, public health essentials, and careers and higher study in public health.</p>
+<span class="brand-kicker">Blog</span>
+<h1 id="blog-title" class="brand-title">{ic('stopwatch')}2-Minute Public Health</h1>
+<p class="brand-tag">Plain-language public health you can read in 2 minutes. By Sabbir Ahmed, epidemiologist.</p>
+<p>I write about global health hot topics, how to read health data, public health essentials, and careers and higher study in public health.</p>
 </div>
 </section>
 
@@ -534,6 +537,7 @@ for i, p in enumerate(POSTS):
     art = f'''<div class="wrap">
 <article class="post" aria-labelledby="post-title">
 <a class="back" href="blog.html">{ic('arrow')}<span>Back to all posts</span></a>
+<span class="brand-kicker brand-title">{ic('stopwatch')}2-Minute Public Health</span>
 <span class="pill {pill}">{E(p['theme'])}</span>
 <h1 id="post-title">{E(p['title'])}</h1>
 <p class="meta-line">By Md Sabbir Ahmed · {E(p['date'])} · {E(p['read'])}</p>

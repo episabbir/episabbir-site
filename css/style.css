@@ -358,3 +358,10 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 
 /* all text black */
 body a:not(.btn):not(.card):not(.paper):not(.feature-post):not(.fb-strip):not(.scholar-btn){text-decoration-thickness:1px}
+
+.brand-kicker{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#000;margin-bottom:6px}
+.brand-tag{font-size:19px;font-weight:600;margin:4px 0 10px}
+.post .brand-kicker{margin:14px 0 8px}
+.brand-title{display:flex;align-items:center;gap:.3em}
+.brand-title .icon{width:1em;height:1em;flex:none;stroke:#0f766e;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.brand-kicker.brand-title .icon{width:1.3em;height:1.3em}
