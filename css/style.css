@@ -343,6 +343,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 }
 @media (max-width:760px){
   .hero-photo{flex:none;align-items:center}
+  .hero-text{flex:none}
   .hero-photo img{height:170px;align-self:center}
   .scholar-btn{flex-wrap:nowrap;gap:10px;padding:10px 16px}
   .summary .scholar-btn img{height:20px}

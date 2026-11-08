@@ -51,7 +51,7 @@ PERSON_LD = """<script type="application/ld+json">
 "address":{"@type":"PostalAddress","addressRegion":"SK","addressCountry":"CA"},
 "alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Saskatchewan"},{"@type":"CollegeOrUniversity","name":"Patuakhali Science and Technology University"}],
 "knowsAbout":["Epidemiology","Childhood immunization","Population health","SAS","R"],
-"sameAs":["https://www.linkedin.com/in/sabbirepidemiologist/"]}
+"sameAs":["https://www.linkedin.com/in/sabbirepidemiologist/","https://orcid.org/0000-0002-7663-2181"]}
 </script>"""
 
 # ---------- shared parts ----------
@@ -92,6 +92,7 @@ FOOTER = f'''<footer class="contact" id="contact">
 <div class="contact-links">
 <a href="mailto:sabbir.epidemiologist@gmail.com">{ic('mail')}sabbir.epidemiologist@gmail.com</a>
 <a href="https://www.linkedin.com/in/sabbirepidemiologist/">{logo('linkedin.png', 'in', 'sm')}LinkedIn</a>
+<a href="https://orcid.org/0000-0002-7663-2181">{logo('orcid.png', 'iD', 'sm')}ORCID</a>
 </div>
 <div class="small-print footnotes">
 <p>The views expressed on this site are my own and do not represent the views or positions of my employer.</p>
