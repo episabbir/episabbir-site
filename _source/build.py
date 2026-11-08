@@ -103,6 +103,12 @@ FOOTER = f'''<footer class="contact" id="contact">
 </footer>'''
 
 SITE_URL = 'https://episabbir.ca/'
+from PIL import Image as _PILImage
+def _img_size(rel):
+    try:
+        with _PILImage.open(f'{OUT}/{rel}') as _im: return _im.size
+    except Exception: return (1200, 630)
+
 
 def page(title, desc, current, body, script='', og_img='images/og-card.png', path=''):
     out = f'''<!doctype html>
@@ -119,6 +125,12 @@ def page(title, desc, current, body, script='', og_img='images/og-card.png', pat
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{SITE_URL}{og_img}">
+<meta property="og:image:secure_url" content="{SITE_URL}{og_img}">
+<meta property="og:image:type" content="{'image/png' if og_img.endswith('.png') else 'image/jpeg'}">
+<meta property="og:image:width" content="{_img_size(og_img)[0]}">
+<meta property="og:image:height" content="{_img_size(og_img)[1]}">
+<meta property="og:image:alt" content="{E(title)}">
+<meta name="twitter:image" content="{SITE_URL}{og_img}">
 <meta property="og:url" content="{SITE_URL}{path}">
 <link rel="canonical" href="{SITE_URL}{path}">
 <meta name="twitter:card" content="summary_large_image">
