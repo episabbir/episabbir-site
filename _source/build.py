@@ -104,6 +104,26 @@ FOOTER = f'''<footer class="contact" id="contact">
 
 SITE_URL = 'https://episabbir.ca/'
 from PIL import Image as _PILImage
+def _share_img(image_name):
+    """Make a 1200x630 copy of a post image for social link previews (centre crop)."""
+    import os
+    src = f'{OUT}/images/blog/{image_name}'
+    base = os.path.splitext(image_name)[0]
+    rel = f'images/blog/share/{base}-share.jpg'
+    dst = f'{OUT}/{rel}'
+    try:
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with _PILImage.open(src) as im:
+            im = im.convert('RGB'); w, h = im.size; target = 1200/630
+            if w/h > target:
+                nw = int(h*target); left = (w-nw)//2; im = im.crop((left, 0, left+nw, h))
+            else:
+                nh = int(w/target); top = (h-nh)//2; im = im.crop((0, top, w, top+nh))
+            im.resize((1200, 630), _PILImage.LANCZOS).save(dst, quality=86, optimize=True)
+        return rel
+    except Exception:
+        return f'images/blog/{image_name}'
+
 def _img_size(rel):
     try:
         with _PILImage.open(f'{OUT}/{rel}') as _im: return _im.size
@@ -562,7 +582,7 @@ for i, p in enumerate(POSTS):
 </article>
 {('<section class="section" aria-labelledby="more-title"><h2 class="section-title" id="more-title">More posts</h2><div class="grid">' + more + '</div></section>') if more else ''}
 </div>'''
-    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=f"images/blog/{p['image']}", path=post_url(p)[:-5]))
+    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=_share_img(p['image']), path=post_url(p)[:-5]))
 
 # ---------- WORK WITH ME ----------
 MAIL = 'mailto:sabbir.epidemiologist@gmail.com'
