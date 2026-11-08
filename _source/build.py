@@ -56,7 +56,7 @@ PERSON_LD = """<script type="application/ld+json">
 
 # ---------- shared parts ----------
 NAV = [('index.html', 'Home'), ('about.html', 'About me'), ('research.html', 'My Research'),
-       ('blog.html', 'Blog'), ('work.html', 'Want to work with me?'), ('gallery.html', 'Gallery')]
+       ('blog.html', 'Blog'), ('work.html', 'Want to work with me?')]  # Gallery hidden from menu Nov 7, 2026 (no photos); re-add ('gallery.html', 'Gallery') to bring it back
 
 def nav(current):
     items = []
@@ -600,7 +600,7 @@ gallery = f'''<div class="wrap">
 </div>
 </section>
 </div>'''
-open(f'{OUT}/gallery.html', 'w').write(page('Gallery | Md Sabbir Ahmed', 'Photos from conferences, presentations, fieldwork and awards.', 'Gallery', gallery, path='gallery'))
+open(f'{OUT}/gallery.html', 'w').write(page('Gallery | Md Sabbir Ahmed', 'Photos from conferences, presentations, fieldwork and awards.', 'Gallery', gallery, path='gallery').replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"', 1))
 
 
 # ---------- SEO: sitemap + robots ----------
