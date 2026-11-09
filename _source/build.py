@@ -617,7 +617,7 @@ work = f'''<div class="wrap">
 <p class="indep"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span class="sr-only">Note: </span>My collaboration and mentoring work is independent of my current employment.</p>
 </section>
 </div>'''
-open(f'{OUT}/work.html', 'w').write(page('Work with me | Md Sabbir Ahmed', 'Work with epidemiologist Md Sabbir Ahmed on research collaboration or get research mentoring.', 'Want to work with me?', work, path='work'))
+open(f'{OUT}/work.html', 'w').write(page('Want to work with me? | Md Sabbir Ahmed', 'Work with epidemiologist Md Sabbir Ahmed on research collaboration or get research mentoring.', 'Want to work with me?', work, path='work'))
 
 
 # ---------- GALLERY ----------
