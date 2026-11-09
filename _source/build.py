@@ -13,6 +13,7 @@ E = html.escape
 P = {
  'image': '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 16-5-5-9 9"/>',
  'stopwatch': '<circle cx="12" cy="14" r="8"/><path d="M12 10v4l2.5 2.5M10 2h4M12 2v4M19 6l1.5-1.5"/>',
+ 'download': '<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>',
  'mail': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
  'link': '<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
  'arrow': '<path d="M5 12h14M13 6l6 6-6 6"/>',
@@ -354,6 +355,7 @@ about = f'''<div class="wrap">
 <h1 id="about-title">About me</h1>
 <p>As an epidemiologist at the Ministry of Health, Government of Saskatchewan, I work on childhood immunization surveillance. Since 2024, I have been measuring vaccine coverage, reporting to the Public Health Agency of Canada and turning data into briefing notes that support decisions.</p>
 <p>I have more than six years of experience managing and analyzing large-scale administrative health data. I hold an MSc in Community and Population Health Science from the University of Saskatchewan, and I have published 38 peer-reviewed articles, 25 of them as lead author.</p>
+<p style="margin-top:18px"><a class="btn btn-primary" href="files/Md_Sabbir_Ahmed_CV.pdf?v={VER}" target="_blank" rel="noopener">{ic('download')} Download CV (PDF)</a></p>
 </div>
 </section>
 
