@@ -105,7 +105,7 @@ FOOTER = f'''<footer class="contact" id="contact">
 
 SITE_URL = 'https://episabbir.ca/'
 from PIL import Image as _PILImage
-def _share_img(image_name):
+def _share_img(image_name, pad=False):
     """Make a 1200x630 copy of a post image for social link previews (centre crop)."""
     import os
     src = f'{OUT}/images/blog/{image_name}'
@@ -116,6 +116,11 @@ def _share_img(image_name):
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         with _PILImage.open(src) as im:
             im = im.convert('RGB'); w, h = im.size; target = 1200/630
+            if pad and w/h < target:
+                nw = int(round(h*target)); canvas_ = _PILImage.new('RGB', (nw, h), im.getpixel((w-1, h//2)))
+                left = (nw-w)//2
+                canvas_.paste(_PILImage.new('RGB', (left, h), im.getpixel((0, h//2))), (0, 0))
+                canvas_.paste(im, (left, 0)); im = canvas_; w, h = im.size
             if w/h > target:
                 nw = int(h*target); left = (w-nw)//2; im = im.crop((left, 0, left+nw, h))
             else:
@@ -181,7 +186,8 @@ os.makedirs(f'{OUT}/images/blog', exist_ok=True)
 def post_url(p): return f"post-{p['slug']}.html"
 def post_img(p, cls='post-img'):
     pill, bg, fg = THEME_STYLE[p['theme']]
-    return (f'<div class="{cls}" style="background:{bg};color:{fg}">{ic("image")}'
+    fit = ' fit-contain' if p.get('image_fit') == 'contain' else ''
+    return (f'<div class="{cls}{fit}" style="background:{bg};color:{fg}">{ic("image")}'
             f'<img src="images/blog/{p["image"]}?v={VER}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
 def post_card(p, extra_cls='', data=True):
     pill = THEME_STYLE[p['theme']][0]
@@ -574,6 +580,7 @@ for i, p in enumerate(POSTS):
 <span class="brand-kicker brand-title">{ic('stopwatch')}2-Minute Public Health</span>
 <span class="pill {pill}">{E(p['theme'])}</span>
 <h1 id="post-title">{E(p['title'])}</h1>
+{('<p class="post-subtitle">' + E(p['subtitle']) + '</p>') if p.get('subtitle') else ''}
 <p class="meta-line">By Md Sabbir Ahmed · {E(p['date'])} · {E(p['read'])}</p>
 {post_img(p, 'post-hero')}
 <div class="post-body">
@@ -584,7 +591,7 @@ for i, p in enumerate(POSTS):
 </article>
 {('<section class="section" aria-labelledby="more-title"><h2 class="section-title" id="more-title">More posts</h2><div class="grid">' + more + '</div></section>') if more else ''}
 </div>'''
-    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=_share_img(p['image']), path=post_url(p)[:-5]))
+    open(f'{OUT}/{post_url(p)}', 'w').write(page(f"{p['title']} | Md Sabbir Ahmed", p['summary'], 'Blog', art, og_img=_share_img(p['image'], p.get('share_pad', False)), path=post_url(p)[:-5]))
 
 # ---------- WORK WITH ME ----------
 MAIL = 'mailto:sabbir.epidemiologist@gmail.com'

@@ -3,6 +3,40 @@
 # Body blocks: ('h', text) subheading, ('p', text) paragraph, ('ul', [items]) bullet list.
 
 POSTS = [
+    {
+        'slug': 'your-first-degree-doesnt-lock-in-your-career',
+        'theme': 'Careers and higher study',
+        'title': "Your First Degree Doesn't Lock In Your Career",
+        'subtitle': 'From Nutrition in Bangladesh to Epidemiology in Canada',
+        'summary': "My first degree was in nutrition, and today I'm an epidemiologist. Here's how I moved from Bangladesh to public health in Canada, and what helped along the way.",
+        'read': 'About 2 minutes',
+        'date': 'November 10, 2026',
+        'image': 'post4-first-degree.jpg',
+        'share_pad': True,
+        'image_fit': 'contain',
+        'image_alt': "A path with seven stops from Bangladesh to Canada: bachelor's degree, research fellowships, master's degree, moving to Canada in 2021, MSc at USask, Research Officer at SPHERU, and epidemiologist at the Saskatchewan Ministry of Health.",
+        'body': [
+            ('p', 'Many students worry that their first degree decides their whole career. I did nutrition and food science. Today I am an epidemiologist. Here is how that happened.'),
+            ('h', 'Where I started'),
+            ('p', "My path began in Bangladesh. I studied nutrition and food science at Patuakhali Science and Technology University. I finished my bachelor's degree there, and then a master's degree. My master's work focused on WASH, which stands for water, sanitation and hygiene."),
+            ('h', 'Doing research early'),
+            ('p', 'While I was still a student in Bangladesh, I won small research fellowships. They came from WaterAid Bangladesh, the Ministry of Science and Technology, and Share-Net Bangladesh. These fellowships supported my early research.'),
+            ('h', 'Coming to Canada'),
+            ('p', "In 2021, I started a second master's degree at the University of Saskatchewan (USask) in Saskatoon. My program was Community and Population Health Science. I received a Dean's Scholarship worth $36,000."),
+            ('p', 'This is where I moved from nutrition into epidemiology. Epidemiology is the study of how health problems spread and change in groups of people. During the program, I got travel awards to share my work at conferences in Canada. I also won a best poster award before I finished my degree.'),
+            ('h', 'Starting my professional career in Canada'),
+            ('p', 'After my degree, I spent a year as a Research Officer at the Saskatchewan Population Health and Evaluation Research Unit (SPHERU) at USask. After that, I became an epidemiologist at the provincial Ministry of Health in Saskatchewan. Today I work on childhood immunization surveillance.'),
+            ('h', 'What helped me'),
+            ('p', 'If you are thinking about a similar path, here is what helped me:'),
+            ('ul', ['Start research during your first degree.', 'Apply for small grants and fellowships. A small one still counts on your record.', 'Look for scholarships when you apply to a graduate program.', 'Share your work at conferences, even as a student.']),
+            ('h', 'The takeaway'),
+            ('p', 'Your first degree is a starting point. The research and data skills you build along the way can take you into a new field. Mine took me from food and nutrition to vaccines.'),
+        ],
+        'sources': [
+            ('Md Sabbir Ahmed.', 'About me', 'https://episabbir.ca/about.html', 'episabbir.ca.'),
+            ('CDC.', 'Principles of Epidemiology, Lesson 1, Section 1: Definition of Epidemiology', 'https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section1.html', ''),
+        ],
+    },
     dict(
         slug='measles-came-back-to-canada',
         theme='Global health hot topics',
