@@ -369,3 +369,7 @@ body a:not(.btn):not(.card):not(.paper):not(.feature-post):not(.fb-strip):not(.s
 .post-subtitle{font-size:20px;font-weight:600;color:#000;margin:-4px 0 10px}
 .fit-contain img{object-fit:contain !important}
 .fit-contain svg{display:none}
+.latest-dot{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:#0f766e;margin-right:8px;white-space:nowrap}
+.latest-dot i{width:9px;height:9px;border-radius:50%;background:#14b8a6;display:inline-block;animation:latestpulse 1.8s ease-out infinite}
+@keyframes latestpulse{0%{box-shadow:0 0 0 0 rgba(20,184,166,.7)}70%{box-shadow:0 0 0 9px rgba(20,184,166,0)}100%{box-shadow:0 0 0 0 rgba(20,184,166,0)}}
+@media (prefers-reduced-motion:reduce){.latest-dot i{animation:none}}

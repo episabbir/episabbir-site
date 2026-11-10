@@ -190,13 +190,14 @@ def post_img(p, cls='post-img'):
     if p.get('thumb_bg'): bg = p['thumb_bg']
     return (f'<div class="{cls}{fit}" style="background:{bg};color:{fg}">{ic("image")}'
             f'<img src="images/blog/{p["image"]}?v={VER}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
+LATEST = '<span class="latest-dot"><i aria-hidden="true"></i>Latest</span>'
 def post_card(p, extra_cls='', data=True):
     pill = THEME_STYLE[p['theme']][0]
     d = f' data-cat="{E(p["theme"])}"' if data else ''
     return f'''<a class="card {extra_cls}" href="{post_url(p)}"{d}>
 {post_img(p)}
 <div class="card-body"><span class="pill {pill}">{E(p['theme'])}</span><h3>{E(p['title'])}</h3>
-<p class="excerpt">{E(p['summary'])}</p><p>{E(p['date'])} · {E(p['read'])}</p></div>
+<p class="excerpt">{E(p['summary'])}</p><p>{LATEST if p is POSTS[0] else ''}{E(p['date'])} · {E(p['read'])}</p></div>
 </a>'''
 
 # ---------- HOME ----------
@@ -536,7 +537,7 @@ blog = f'''<div class="wrap">
 <span class="pill {fpill}" style="align-self:flex-start">{E(feat['theme'])}</span>
 <h2>{E(feat['title'])}</h2>
 <p class="excerpt">{E(feat['summary'])}</p>
-<p class="meta-line">{E(feat['date'])} · {E(feat['read'])}</p>
+<p class="meta-line">{LATEST}{E(feat['date'])} · {E(feat['read'])}</p>
 <span class="btn btn-primary" style="align-self:flex-start">Read the post {ic('arrow')}</span>
 </div>
 </a>
