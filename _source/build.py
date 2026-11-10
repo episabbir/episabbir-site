@@ -187,6 +187,7 @@ def post_url(p): return f"post-{p['slug']}.html"
 def post_img(p, cls='post-img'):
     pill, bg, fg = THEME_STYLE[p['theme']]
     fit = ' fit-contain' if p.get('image_fit') == 'contain' else ''
+    if p.get('thumb_bg'): bg = p['thumb_bg']
     return (f'<div class="{cls}{fit}" style="background:{bg};color:{fg}">{ic("image")}'
             f'<img src="images/blog/{p["image"]}?v={VER}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
 def post_card(p, extra_cls='', data=True):
@@ -585,8 +586,7 @@ for i, p in enumerate(POSTS):
 {post_img(p, 'post-hero')}
 <div class="post-body">
 {body_html(p['body'])}
-<h2>Sources</h2>
-<ul class="sources">{srcs}</ul>
+{('<h2>Sources</h2>' + chr(10) + '<ul class="sources">' + srcs + '</ul>') if srcs else ''}
 </div>
 </article>
 {('<section class="section" aria-labelledby="more-title"><h2 class="section-title" id="more-title">More posts</h2><div class="grid">' + more + '</div></section>') if more else ''}

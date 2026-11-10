@@ -367,6 +367,5 @@ body a:not(.btn):not(.card):not(.paper):not(.feature-post):not(.fb-strip):not(.s
 .brand-kicker.brand-title .icon{width:1.3em;height:1.3em}
 
 .post-subtitle{font-size:20px;font-weight:600;color:#000;margin:-4px 0 10px}
-.fit-contain{background:#fff !important}
 .fit-contain img{object-fit:contain !important}
 .fit-contain svg{display:none}
