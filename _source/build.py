@@ -272,7 +272,7 @@ jobs = [
     dict(id='moh', current=True, file='gov-sk.png', fb='SK', title='Epidemiologist', org='Ministry of Health, Government of Saskatchewan',
          when='Sep 2024 – present', duties=[
             ('db', 'Analyze administrative health data from Panorama and other databases, such as the Discharge Abstract Database, for surveillance and reporting in SAS.'),
-            ('doc', 'Write briefing notes and reports on immunization coverage for vaccine-preventable diseases, and submit data to the Public Health Agency of Canada.'),
+            ('doc', 'Write briefing notes and reports on immunization coverage for vaccine-preventable diseases, and submit data to a federal agency.'),
             ('chat', "Handle data requests from the Minister's office, media and external partners."),
             ('link', 'Oversee external research projects: data extraction, data linkage, data sharing agreements and guidance for data analysts.'),
             ('shield', 'Support the Communicable Disease team with immunization surveillance during public health events and emergencies.'),
@@ -361,23 +361,23 @@ about = f'''<div class="wrap">
 <img src="images/headshot.jpg?v={VER}" alt="Md Sabbir Ahmed">
 <div class="summary-text">
 <h1 id="about-title">About me</h1>
-<p>As an epidemiologist at the Ministry of Health, Government of Saskatchewan, I work on childhood immunization surveillance. Since 2024, I have been measuring vaccine coverage, reporting to the Public Health Agency of Canada and turning data into briefing notes that support decisions.</p>
+<p>As an epidemiologist at the Ministry of Health, Government of Saskatchewan, I work on childhood immunization surveillance. Since 2024, I have been measuring vaccine coverage, reporting to a federal agency and turning data into briefing notes that support decisions.</p>
 <p>I have more than six years of experience managing and analyzing large-scale administrative health data. I hold an MSc in Community and Population Health Science from the University of Saskatchewan, and I have published 38 peer-reviewed articles, 25 of them as lead author.</p>
 <p style="margin-top:18px"><a class="btn btn-primary" href="files/Md_Sabbir_Ahmed_CV.pdf?v={VER}" target="_blank" rel="noopener">{ic('download')} Download CV (PDF)</a></p>
 </div>
 </section>
 
-<section class="section" aria-labelledby="edu-title">
-<h2 class="section-title" id="edu-title">Education</h2>
-<p class="section-sub">From Bangladesh to Canada: my journey from nutrition science to epidemiology.</p>
-<div class="grid">{edu_tiles}</div>
-</section>
-
-<section class="section" style="padding-top:0" aria-labelledby="work-title">
+<section class="section" aria-labelledby="work-title">
 <h2 class="section-title" id="work-title">Work</h2>
 <p class="section-sub">Click a tile to see my role there.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr))">{job_tiles}</div>
 {''.join(dialog(j) for j in jobs)}
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="edu-title">
+<h2 class="section-title" id="edu-title">Education</h2>
+<p class="section-sub">From Bangladesh to Canada: my journey from nutrition science to epidemiology.</p>
+<div class="grid">{edu_tiles}</div>
 </section>
 
 <section class="section" style="padding-top:0" aria-labelledby="expert-title">
