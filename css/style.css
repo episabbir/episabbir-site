@@ -391,3 +391,12 @@ main .section:last-child{padding-bottom:12px}
 @media (max-width:760px){.contact{margin:12px auto 12px}}
 /* photo borders black (Nov 15) */
 .hero-photo img,.summary img{border-color:#000}
+/* neutral soft-white background, Option 1 (Nov 15) */
+:root{--ground:#fafafa}
+body{background:#fafafa}
+.site-nav{background:rgba(250,250,250,.94)}
+.site-nav a:hover{background:#efefef}
+.hero,.card,.summary,.tile,.sk-group,.skill,.awards,.offer,.svc,.steps li,.feature-post,.post,.paper{border:1px solid #e4e4e4}
+.pill-mint,.status.now,.role-senior,.sk-head .ico,.duties .ico,.svc .ico,.offer .ico,.soon-ico{background:#efefef}
+.fb-strip{background:#fff;border:1px solid #e4e4e4}
+.fb-strip:hover{background:#fff;border-color:#0f766e}
