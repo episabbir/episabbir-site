@@ -373,3 +373,19 @@ body a:not(.btn):not(.card):not(.paper):not(.feature-post):not(.fb-strip):not(.s
 .latest-dot i{width:9px;height:9px;border-radius:50%;background:#14b8a6;display:inline-block;animation:latestpulse 1.8s ease-out infinite}
 @keyframes latestpulse{0%{box-shadow:0 0 0 0 rgba(20,184,166,.7)}70%{box-shadow:0 0 0 9px rgba(20,184,166,0)}100%{box-shadow:0 0 0 0 rgba(20,184,166,0)}}
 @media (prefers-reduced-motion:reduce){.latest-dot i{animation:none}}
+
+/* clean footer (Nov 15): no solid block, thin line, black text */
+.contact{background:transparent;color:#000;border-radius:0;border-top:1px solid #000;margin:48px auto 20px}
+.contact .wrap{padding-left:0;padding-right:0}
+.contact h2,.contact p{color:#000}
+.contact-links a{background:transparent;color:#000;border:1px solid var(--line)}
+.contact-links a:hover{background:#e3eeec;color:#000;border-color:var(--accent)}
+.footnotes{border-top:1px solid var(--line)}
+.footnotes p,.footnotes a{color:#000}
+@media (max-width:760px){.contact .wrap{padding-left:0;padding-right:0}}
+
+/* less space before the footer (Nov 15) */
+.contact{margin:28px auto 16px}
+.contact .wrap{padding-top:26px;padding-bottom:22px}
+main .section:last-child{padding-bottom:12px}
+@media (max-width:760px){.contact{margin:12px auto 12px}}
