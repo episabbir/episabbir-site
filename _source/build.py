@@ -230,7 +230,7 @@ home = f'''<div class="wrap">
 
 <section class="section" id="latest" aria-labelledby="latest-title">
 <div class="row-head">
-<div><span class="brand-kicker">Latest posts</span><h2 class="section-title brand-title" id="latest-title">{ic('stopwatch')}2-Minute Public Health</h2></div>
+<div><span class="brand-kicker" style="text-transform:none;letter-spacing:0;font-size:16px">Latest Posts</span><h2 class="section-title brand-title" id="latest-title">{ic('stopwatch')}2-Minute Public Health</h2></div>
 <a href="blog.html" style="font-weight:700">See all posts {ic('arrow')}</a>
 </div>
 <div class="grid">{post_cards}</div>
