@@ -228,20 +228,20 @@ home = f'''<div class="wrap">
 <div class="hero-photo"><img src="images/headshot.jpg?v={VER}" alt="Md Sabbir Ahmed"></div>
 </section>
 
-<section class="section" aria-labelledby="feat-title">
-<div class="row-head">
-<h2 class="section-title" id="feat-title">Latest research</h2>
-<a href="research.html" style="font-weight:700">See all 38 papers {ic('arrow')}</a>
-</div>
-<div class="papers three">{FEATURED}</div>
-</section>
-
-<section class="section" style="padding-top:0" id="latest" aria-labelledby="latest-title">
+<section class="section" id="latest" aria-labelledby="latest-title">
 <div class="row-head">
 <div><span class="brand-kicker">Latest posts</span><h2 class="section-title brand-title" id="latest-title">{ic('stopwatch')}2-Minute Public Health</h2></div>
 <a href="blog.html" style="font-weight:700">See all posts {ic('arrow')}</a>
 </div>
 <div class="grid">{post_cards}</div>
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="feat-title">
+<div class="row-head">
+<h2 class="section-title" id="feat-title">Latest research</h2>
+<a href="research.html" style="font-weight:700">See all 38 papers {ic('arrow')}</a>
+</div>
+<div class="papers three">{FEATURED}</div>
 </section>
 
 <section aria-label="Facebook">
