@@ -389,3 +389,5 @@ body a:not(.btn):not(.card):not(.paper):not(.feature-post):not(.fb-strip):not(.s
 .contact .wrap{padding-top:26px;padding-bottom:22px}
 main .section:last-child{padding-bottom:12px}
 @media (max-width:760px){.contact{margin:12px auto 12px}}
+/* photo borders black (Nov 15) */
+.hero-photo img,.summary img{border-color:#000}
