@@ -496,3 +496,9 @@ section[aria-labelledby="edu-title"] .tile .edu-thesis{grid-column:1 / -1}
 .pill-t2{background:#e1ecf7;color:#000}
 .pill-t3{background:#dff1ee;color:#000}
 .pill-t4{background:#ece6f6;color:#000}
+/* footer icons: no circles, all the same size as the email icon (Nov 16) */
+.contact-links{gap:22px;align-items:center}
+.contact-links a.icon-only{width:auto;height:auto;padding:4px;border:0 !important;border-radius:0;background:transparent !important}
+.contact-links a.icon-only svg{width:26px;height:26px}
+.contact-links a.icon-only .logo{width:26px;height:26px}
+.contact-links a.icon-only:hover{opacity:.7}
