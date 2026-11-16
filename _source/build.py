@@ -259,7 +259,7 @@ open(f'{OUT}/index.html', 'w').write(page(
 # ---------- THESIS ----------
 THESIS_URL = 'https://hdl.handle.net/10388/15001'
 THESIS_TITLE = 'Concurrent experience of self-reported mental health symptoms and problematic substance use during the first two years of COVID-19 pandemic among Canadian adults: evidence from repeated nationwide cross-sectional survey'
-SUPERVISOR_URL = 'https://ca.linkedin.com/in/nazeem-muhajarine-phd-fcahs-23081619'
+SUPERVISOR_URL = 'https://medicine.usask.ca/profiles/che/nazeem-muhajarine.php'
 THESIS_LINK = f'<a class="edu-thesis" href="{THESIS_URL}" target="_blank" rel="noopener">Read my thesis {ic("ext")}</a>'
 THESIS_CARD = f'''<div class="thesis-card">
 <a class="thesis-thumb" href="{THESIS_URL}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/thesis-msc.jpg?v={VER}" alt=""></a>
