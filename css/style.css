@@ -467,3 +467,7 @@ section[aria-labelledby="edu-title"] .tile .meta{grid-area:meta;margin:0}
 .summary img{border:0 !important}
 .summary img{width:160px}
 @media (max-width:760px){.summary img{width:130px}}
+/* funder logos in the right corner of Research grants (Nov 16) */
+.amt-col{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex:none}
+.grant-logo{height:30px;width:auto;max-width:110px;object-fit:contain;mix-blend-mode:multiply}
+@media (max-width:760px){.amt-col{flex-direction:row;align-items:center;gap:12px}}

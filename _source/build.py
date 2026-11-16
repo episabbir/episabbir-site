@@ -339,17 +339,21 @@ grants = [
      'To support MS thesis research at Patuakhali Science and Technology University', ''),
 ]
 grant_total = sum(g[2] for g in grants)
+GRANT_LOGOS = {
+    '2021 · Share-Net Bangladesh': f'<img class="grant-logo" src="images/logos/sharenet.png?v={VER}" alt="Share-Net Bangladesh">',
+    '2019 · WaterAid Bangladesh': f'<img class="grant-logo" src="images/logos/wateraid.png?v={VER}" alt="WaterAid">',
+}
 grant_items = ''.join(f'''<li><span class="award-ico pill pill-mint">{ic('flask')}</span>
 <span class="what"><strong>{E(t)}</strong><span>{E(m)}</span>
 <span class="proj">{lbl}: {E(pt)}</span></span>
-<span class="amt">≈CA${v:,}</span></li>''' for t, m, v, lbl, pt, u in grants)
+<span class="amt-col">{GRANT_LOGOS.get(m, '')}<span class="amt">≈CA${v:,}</span></span></li>''' for t, m, v, lbl, pt, u in grants)
 
 software = [('sas.png', 'SAS', 'SAS'), ('sql.png', 'SQL', 'SQL'), ('r.png', 'R', 'R'), ('powerbi.png', 'BI', 'Power BI'),
             ('arcgis.png', 'GIS', 'ArcGIS'), ('msoffice.png', 'MS', 'Microsoft Office'), ('canva.png', 'Ca', 'Canva')]
 skill_groups = [
     ('db', 'Programming and data management', ['SAS programming: Base SAS, macros and PROC SQL', 'R', 'Data cleaning, linkage and validation']),
     ('chart', 'Analytical methods', ['Regression modelling', 'Multilevel modelling', 'Spatial analysis and mapping', 'Survey data analysis']),
-    ('shield', 'Health data I have worked with', ['Panorama immunization data', 'Discharge Abstract Database (DAD)', 'Canadian Housing Survey', 'Demographic and Health Surveys (DHS)', 'Multiple Indicator Cluster Surveys (MICS)', 'Global School-based Student Health Survey (GSHS)']),
+    ('shield', 'Health data I have worked with', ['Panorama', 'Discharge Abstract Database', 'Canadian Community Health Survey', 'Canadian Housing Survey', 'DHS', 'MICS', 'GSHS']),
     ('pen', 'Communication', ['Briefing notes', 'Scientific manuscripts', 'Research posters', 'Data visualization (Power BI, ArcGIS)']),
 ]
 skill_group_html = ''.join(f'''<div class="sk-group"><div class="sk-head"><span class="ico">{ic(i)}</span><h3>{E(h)}</h3></div>
