@@ -256,6 +256,20 @@ home = f'''<div class="wrap">
 open(f'{OUT}/index.html', 'w').write(page(
     'Md Sabbir Ahmed | Epidemiologist', 'Md Sabbir Ahmed is an epidemiologist in Saskatchewan, Canada, working on childhood immunization surveillance and population health research.', 'Home', home, PERSON_LD))
 
+# ---------- THESIS ----------
+THESIS_URL = 'https://hdl.handle.net/10388/15001'
+THESIS_TITLE = 'Concurrent experience of self-reported mental health symptoms and problematic substance use during the first two years of COVID-19 pandemic among Canadian adults: evidence from repeated nationwide cross-sectional survey'
+SUPERVISOR_URL = 'https://ca.linkedin.com/in/nazeem-muhajarine-phd-fcahs-23081619'
+THESIS_LINK = f'<a class="edu-thesis" href="{THESIS_URL}" target="_blank" rel="noopener">Read my thesis {ic("ext")}</a>'
+THESIS_CARD = f'''<div class="thesis-card">
+<a class="thesis-thumb" href="{THESIS_URL}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/thesis-msc.jpg?v={VER}" alt=""></a>
+<div class="thesis-body"><span class="thesis-kicker">{ic('cap')} MSc thesis</span>
+<h3><a href="{THESIS_URL}" target="_blank" rel="noopener">{E(THESIS_TITLE)}</a></h3>
+<p class="meta">University of Saskatchewan · 2023 · Supervisor: <a href="{SUPERVISOR_URL}" target="_blank" rel="noopener">Dr. Nazeem Muhajarine, PhD, FCAHS</a></p>
+<a class="thesis-read" href="{THESIS_URL}" target="_blank" rel="noopener">Read thesis {ic('ext')}</a></div>
+</div>
+'''
+
 # ---------- ABOUT ----------
 edu = [
     ('usask.png', 'USask', 'MSc, Community and Population Health Science', 'Department of Community Health and Epidemiology, College of Medicine, University of Saskatchewan, Canada', '2023'),
@@ -265,7 +279,7 @@ edu = [
 edu_tiles = ''.join(f'''<div class="tile">
 {logo(f, fb, 'edu-logo')}
 <div><span class="year">{y}</span><h3>{E(d)}</h3></div>
-<p class="meta">{E(m)}</p>
+<p class="meta">{E(m)}</p>{THESIS_LINK if f == 'usask.png' else ''}
 </div>''' for f, fb, d, m, y in edu)
 
 jobs = [
@@ -472,7 +486,7 @@ research = f'''<div class="wrap">
 </div>
 </section>
 
-<section class="section" aria-labelledby="pubs-title">
+{THESIS_CARD}<section class="section" aria-labelledby="pubs-title">
 <div class="row-head">
 <h2 class="section-title" id="pubs-title">Publications</h2>
 <span style="color:var(--muted)">Newest first · click any paper to read it</span>
