@@ -219,7 +219,7 @@ home = f'''<div class="wrap">
 <section class="hero" aria-labelledby="hero-title">
 <div class="hero-text">
 <span class="pill pill-mint" style="font-size:14px;padding:7px 14px;text-transform:uppercase;letter-spacing:.08em;font-weight:700">Md Sabbir Ahmed</span>
-<h1 id="hero-title">Translating health data into <span>evidence for action.</span></h1>
+<h1 id="hero-title">Translating health data into <span>evidence for action</span></h1>
 <p>Hi, I'm Sabbir Ahmed, an epidemiologist at the provincial Ministry of Health in Saskatchewan, Canada. I work on childhood immunization surveillance and population health research.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px">
 <a class="btn btn-primary" href="about.html">About me {ic('arrow')}</a>
