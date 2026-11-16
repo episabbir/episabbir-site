@@ -491,3 +491,8 @@ section[aria-labelledby="edu-title"] .tile .edu-thesis{grid-column:1 / -1}
 .thesis-card{flex-direction:row-reverse}
 @media (max-width:760px){.thesis-card{flex-direction:column}}
 .thesis-thumb{border:0;background:#fff;border-radius:0}
+/* four blog theme colours (Nov 16) */
+.pill-t1{background:#fbefd2;color:#000}
+.pill-t2{background:#e1ecf7;color:#000}
+.pill-t3{background:#dff1ee;color:#000}
+.pill-t4{background:#ece6f6;color:#000}

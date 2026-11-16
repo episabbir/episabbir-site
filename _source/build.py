@@ -178,10 +178,10 @@ def page(title, desc, current, body, script='', og_img='images/og-card.png', pat
 # ---------- BLOG DATA (newest first; first = featured) ----------
 from blog_posts import POSTS
 BLOG_CATS = ['Global health hot topics', 'Reading health data', 'Public health essentials', 'Careers and higher study']
-THEME_STYLE = {'Global health hot topics': ('pill-peach', '#fbefd2', '#6b4e0e'),
-               'Reading health data': ('pill-mint', '#dff1ee', '#0b5a54'),
-               'Public health essentials': ('pill-peach', '#fbefd2', '#6b4e0e'),
-               'Careers and higher study': ('pill-mint', '#dff1ee', '#0b5a54')}
+THEME_STYLE = {'Global health hot topics': ('pill-t1', '#fbefd2', '#6b4e0e'),
+               'Reading health data': ('pill-t2', '#e1ecf7', '#1f4e79'),
+               'Public health essentials': ('pill-t3', '#dff1ee', '#0b5a54'),
+               'Careers and higher study': ('pill-t4', '#ece6f6', '#4b3b78')}
 os.makedirs(f'{OUT}/images/blog', exist_ok=True)
 def post_url(p): return f"post-{p['slug']}.html"
 def post_img(p, cls='post-img'):
