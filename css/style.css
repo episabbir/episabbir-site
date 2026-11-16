@@ -404,3 +404,5 @@ body{background:#fafafa}
 .stat{background:#f3f3f3;color:#000;border-radius:10px;border-left:5px solid #0f766e;padding:16px 20px}
 .stat b{color:#000}
 .stat span{color:#000;font-size:15px}
+/* current job tag in teal (Nov 15) */
+.status.now{background:#0f766e;color:#fff}
