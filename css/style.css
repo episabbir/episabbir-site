@@ -406,3 +406,5 @@ body{background:#fafafa}
 .stat span{color:#000;font-size:15px}
 /* current job tag in teal (Nov 15) */
 .status.now{background:#0f766e;color:#fff}
+/* home photo: no border, soft grey shadow (Nov 16) */
+.hero-photo img{border:0;box-shadow:0 6px 18px rgba(0,0,0,.12)}
