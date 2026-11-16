@@ -279,7 +279,7 @@ edu = [
 edu_tiles = ''.join(f'''<div class="tile">
 {logo(f, fb, 'edu-logo')}
 <div><span class="year">{y}</span><h3>{E(d)}</h3></div>
-<p class="meta">{E(m)}</p>{THESIS_LINK if f == 'usask.png' else ''}
+<p class="meta">{E(m)}</p>
 </div>''' for f, fb, d, m, y in edu)
 
 jobs = [
