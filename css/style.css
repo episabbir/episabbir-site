@@ -1,5 +1,5 @@
 /* sabbirepi.ca shared styles */
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..800&family=DM+Sans:wght@400;500;700&display=swap');
 
 :root{
   --ink:#10302e;
@@ -21,7 +21,7 @@ body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:#000;background:v
 img{max-width:100%;display:block}
 a{color:#000}
 a:hover{color:#000}
-h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;margin:0}
+h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;line-height:1.15;margin:0}
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 .section{padding:40px 0}
 .section-title{font-size:34px;font-weight:700;margin-bottom:6px}
@@ -98,7 +98,7 @@ h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;margin:0}
 
 /* logo slot: shows the image if the file exists, otherwise the text badge */
 .logo{position:relative;width:64px;height:64px;flex:none;border-radius:14px;background:#eaf2f0;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.logo .fallback{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:15px;color:#000;text-align:center;line-height:1.05;padding:4px}
+.logo .fallback{font-family:'Source Serif 4',Georgia,serif;font-weight:800;font-size:15px;color:#000;text-align:center;line-height:1.05;padding:4px}
 .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:6px}
 .logo.sm{width:28px;height:28px;border-radius:7px}
 .logo.sm .fallback{font-size:10px}
@@ -108,7 +108,7 @@ h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;margin:0}
 .tile{background:var(--card);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;text-align:left;font:inherit;color:#000}
 .tile h3{font-size:19px;font-weight:700}
 .tile .meta{margin:0;color:#000;font-size:15px}
-.tile .year{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;color:#000}
+.tile .year{font-family:'Source Serif 4',Georgia,serif;font-weight:800;font-size:22px;color:#000}
 button.tile{cursor:pointer;width:100%}
 button.tile:hover{border-color:var(--accent)}
 .tile .hint{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#000}
@@ -128,9 +128,9 @@ button.tile:hover{border-color:var(--accent)}
 .awards .what{flex:1 1 auto;min-width:0}
 .awards .what strong{display:block;font-size:16px}
 .awards .what span{font-size:14px;color:#000}
-.awards .amt{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;white-space:nowrap}
+.awards .amt{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:18px;white-space:nowrap}
 .total{display:inline-flex;align-items:baseline;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:10px 20px}
-.total b{font-family:'Bricolage Grotesque',sans-serif;font-size:24px}
+.total b{font-family:'Source Serif 4',Georgia,serif;font-size:24px}
 
 /* software */
 .skills{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr))}
@@ -154,7 +154,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 /* research */
 .stats{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 22px}
 .stat{flex:1 1 140px;background:var(--ink);color:#fff;border-radius:18px;padding:16px 20px}
-.stat b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:36px;line-height:1.1}
+.stat b{display:block;font-family:'Source Serif 4',Georgia,serif;font-size:36px;line-height:1.1}
 .stat span{font-size:14px;color:#c6dbd8}
 .papers{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
 .paper{background:#fff;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:#000;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,48,46,.06);transition:transform .15s, box-shadow .15s;}
@@ -212,7 +212,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .awards .what .report{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:14px;font-weight:700}
 .awards .what .report .icon{width:16px;height:16px}
 .awards li.feature{background:var(--peach);padding:22px}
-.awards li.feature .what strong{font-size:20px;font-family:'Bricolage Grotesque',sans-serif}
+.awards li.feature .what strong{font-size:20px;font-family:'Source Serif 4',Georgia,serif}
 .awards li.feature .amt{font-size:24px;color:#000}
 .feat-ico{width:56px;height:56px;border-radius:14px;background:#10302e;color:#f2c94c}
 .feat-ico .icon{width:28px;height:28px}
@@ -264,7 +264,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .svc p{margin:0;color:#000;font-size:15px}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr))}
 .steps li{background:#fff;border-radius:var(--radius);padding:22px;display:flex;gap:14px;align-items:flex-start}
-.steps .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#f2c94c;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;display:flex;align-items:center;justify-content:center}
+.steps .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#f2c94c;font-family:'Source Serif 4',Georgia,serif;font-weight:800;display:flex;align-items:center;justify-content:center}
 .steps h3{font-size:17px;margin-bottom:4px}
 .steps p{margin:0;color:#000;font-size:14px}
 .indep{margin:8px 0 0;padding:16px 20px;background:var(--peach);border-radius:16px;color:#000;font-size:14px}
@@ -310,7 +310,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .menu-toggle{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer}
 @media (max-width:760px){
   .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-  .nav-here{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px}
+  .nav-here{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:18px}
   .site-nav ul{display:none;flex-direction:column;align-items:stretch;padding:4px 16px 14px;gap:4px}
   .site-nav.open ul{display:flex}
   .site-nav a{padding:12px 16px;font-size:16px}
@@ -408,3 +408,58 @@ body{background:#fafafa}
 .status.now{background:#0f766e;color:#fff}
 /* home photo: no border, soft grey shadow (Nov 16) */
 .hero-photo img{border:0;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+
+/* ===== a bit smaller, narrower (preview) ===== */
+body{font-size:15.5px}
+.wrap{max-width:1040px}
+.site-nav ul{max-width:1040px}
+.site-nav a{font-size:14px;padding:8px 14px}
+.contact{max-width:984px}
+.section-title{font-size:28px}
+.section-sub{font-size:15px}
+.btn{font-size:14px;padding:11px 20px}
+.hero{padding:38px 42px;gap:32px}
+.hero h1{font-size:44px}
+.hero p{font-size:16.5px}
+.hero-photo img{width:250px}
+.summary h1{font-size:36px}
+.summary img{width:130px}
+.card-body{padding:18px 20px 20px}
+.card-body h3{font-size:18.5px}
+.post-img{height:130px}
+.paper-thumb{height:140px}
+.paper-body h3{font-size:14.5px}
+.tile h3{font-size:17px}
+.tile .year{font-size:20px}
+.stat b{font-size:30px}
+.feature-img{min-height:260px}
+.feature-body h2{font-size:28px}
+.post h1{font-size:34px}
+.post-body{font-size:17px}
+@media (max-width:760px){.hero h1{font-size:32px}.section-title{font-size:24px}.hero-photo img{width:160px}}
+/* first section on each page: no card (preview) */
+.hero,.summary{background:transparent !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;padding-left:0 !important;padding-right:0 !important;margin-top:8px !important;border-bottom:1px solid #e4e4e4 !important}
+/* ===== Nov 16 tweaks (preview) ===== */
+/* Home photo a little smaller */
+.hero-photo img{width:215px}
+/* paper boxes rounded like blog cards */
+.paper{border-radius:var(--radius) !important;overflow:hidden}
+.paper-thumb{border-radius:0 !important}
+/* Education: small logo left, year top-right, less empty space */
+section[aria-labelledby="edu-title"] .tile{display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo year" "title title" "meta meta";column-gap:12px;row-gap:8px;align-items:start;padding:18px 20px}
+section[aria-labelledby="edu-title"] .tile>div{display:contents}
+section[aria-labelledby="edu-title"] .edu-logo{grid-area:logo;width:150px;max-width:150px;height:48px}
+section[aria-labelledby="edu-title"] .tile .year{grid-area:year;justify-self:end;font-size:18px;line-height:1;padding-top:4px}
+section[aria-labelledby="edu-title"] .tile h3{grid-area:title;margin:6px 0 0}
+section[aria-labelledby="edu-title"] .tile .meta{grid-area:meta;margin:0}
+/* Software: all logos on one line */
+@media (min-width:761px){
+  .skills{grid-template-columns:repeat(7,1fr) !important;gap:10px}
+  .skill{padding:10px !important}
+  .skill .skill-logo{height:36px !important}
+  .skill .skill-logo img{padding:4px 6px !important}
+}
+/* Google Scholar logo smaller */
+.summary .scholar-btn img,.scholar-btn img{height:18px !important}
+.scholar-btn{padding:8px 16px 8px 14px;font-size:14px;gap:10px}
+.scholar-btn span{padding-left:10px}
