@@ -41,7 +41,7 @@ POSTS = [
         title='Measles came back to Canada. What happened?',
         summary='For almost 30 years, Canada kept measles from spreading. Then one outbreak lasted two years and made more than 6,400 people sick.',
         read='About 2 minutes', date='November 5, 2026',
-        image='post1-measles.jpg', image_alt='Illustration of a family talking with a health worker holding a vaccine vial, with a Canadian flag and measles virus shapes in the sky',
+        image='post1-measles.jpg', image_alt='Pencil sketch of a boy with a fever and a red measles rash, next to a map of Canada, a virus, and close-ups of a cough, red eyes and a runny nose',
         body=[
             ('h', 'What is measles?'),
             ('p', 'Measles is an illness caused by a virus, a tiny germ too small to see. It starts like a bad cold: fever, runny nose, red eyes and a cough. Then a red, blotchy rash spreads over the body. Most people get better in one or two weeks. But measles can cause lung infections, brain swelling and even blindness. In 2024, about 95,000 people around the world died from it. Most were young children.'),
