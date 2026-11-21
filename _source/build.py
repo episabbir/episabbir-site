@@ -17,6 +17,7 @@ P = {
  'mail': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
  'link': '<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
  'arrow': '<path d="M5 12h14M13 6l6 6-6 6"/>',
+ 'magchart': '<circle cx="10.5" cy="10.5" r="7"/><path d="M15.5 15.5L21 21"/><path d="M7.5 13v-2M10.5 13V8M13.5 13v-3.5"/>',
  'ext': '<path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>',
  'x': '<path d="M6 6l12 12M18 6 6 18"/>',
  'db': '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
@@ -238,7 +239,7 @@ home = f'''<div class="wrap">
 
 <section class="section" style="padding-top:0" aria-labelledby="feat-title">
 <div class="row-head">
-<h2 class="section-title" id="feat-title">Latest research</h2>
+<h2 class="section-title brand-title" id="feat-title">{ic('magchart')}Latest research</h2>
 <a href="research.html" style="font-weight:700">See all 38 papers {ic('arrow')}</a>
 </div>
 <div class="papers three">{FEATURED}</div>
