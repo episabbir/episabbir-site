@@ -92,9 +92,9 @@ FOOTER = f'''<footer class="contact" id="contact">
 <p>Questions, collaborations or a data project in mind? Send me a note.</p>
 </div>
 <div class="contact-links">
-<a class="icon-only" href="mailto:sabbir.epidemiologist@gmail.com" aria-label="Email me: sabbir.epidemiologist@gmail.com" title="sabbir.epidemiologist@gmail.com">{ic('mail')}</a>
-<a class="icon-only" href="https://www.linkedin.com/in/sabbirepidemiologist/" aria-label="LinkedIn profile" title="LinkedIn">{logo('linkedin.png', 'in', 'sm')}</a>
-<a class="icon-only" href="https://orcid.org/0000-0002-7663-2181" aria-label="ORCID profile" title="ORCID">{logo('orcid.png', 'iD', 'sm')}</a>
+<a class="icon-only" href="mailto:sabbir.epidemiologist@gmail.com" aria-label="Email me: sabbir.epidemiologist@gmail.com" title="sabbir.epidemiologist@gmail.com"><svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></a>
+<a class="icon-only" href="https://www.linkedin.com/in/sabbirepidemiologist/" aria-label="LinkedIn profile" title="LinkedIn"><svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg></a>
+<a class="icon-only" href="https://orcid.org/0000-0002-7663-2181" aria-label="ORCID profile" title="ORCID"><svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0M7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947m-.722 3.038h1.444v10.041H6.647zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722z"/></svg></a>
 </div>
 <div class="small-print footnotes">
 <p>The views expressed on this site are my own and do not represent the views or positions of my employer.</p>

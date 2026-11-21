@@ -504,3 +504,5 @@ section[aria-labelledby="edu-title"] .tile .edu-thesis{grid-column:1 / -1}
 .contact-links a.icon-only:hover{opacity:.7}
 /* phone: keep home photo square so it isn't cut (Nov 16) */
 @media (max-width:760px){.hero-photo img{width:190px;height:190px;aspect-ratio:1;object-fit:cover;object-position:center top}}
+/* footer: Material Design (email, LinkedIn) + Simple Icons (ORCID), black (Nov 20) */
+.contact-links a.icon-only .brand-ic{width:26px;height:26px;color:#000;display:block}
