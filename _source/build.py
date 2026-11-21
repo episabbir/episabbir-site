@@ -17,6 +17,12 @@ P = {
  'mail': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
  'link': '<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
  'arrow': '<path d="M5 12h14M13 6l6 6-6 6"/>',
+ 'sec_work': '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/>',
+ 'sec_edu': '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/><path d="M22 9v5"/>',
+ 'sec_skill': '<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a3 3 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
+ 'sec_soft': '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/>',
+ 'sec_award': '<circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L6 3h4l2 5 2-5h4l-2.5 8.5"/><path d="M12 13v4"/>',
+ 'sec_grant': '<path d="M9 3h6l-1.5 3h-3z"/><path d="M10.5 6C6 8 4 12 4 15.5 4 19 7 21 12 21s8-2 8-5.5C20 12 18 8 13.5 6"/><path d="M14 11.5c-.4-.8-1.2-1.2-2-1.2-1.2 0-2 .7-2 1.5 0 2 4 1.2 4 3.2 0 .8-.9 1.5-2 1.5-.9 0-1.7-.4-2-1.2M12 9.3v1M12 16.5v1"/>',
  'magchart': '<circle cx="10.5" cy="10.5" r="7"/><path d="M15.5 15.5L21 21"/><path d="M7.5 13v-2M10.5 13V8M13.5 13v-3.5"/>',
  'ext': '<path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>',
  'x': '<path d="M6 6l12 12M18 6 6 18"/>',
@@ -387,33 +393,33 @@ about = f'''<div class="wrap">
 </section>
 
 <section class="section" aria-labelledby="work-title">
-<h2 class="section-title" id="work-title">Work</h2>
+<h2 class="section-title brand-title" id="work-title">{ic('sec_work')}Work</h2>
 <p class="section-sub">Click a tile to see my role there.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr))">{job_tiles}</div>
 {''.join(dialog(j) for j in jobs)}
 </section>
 
 <section class="section" style="padding-top:0" aria-labelledby="edu-title">
-<h2 class="section-title" id="edu-title">Education</h2>
+<h2 class="section-title brand-title" id="edu-title">{ic('sec_edu')}Education</h2>
 <p class="section-sub">From Bangladesh to Canada: my journey from nutrition science to epidemiology.</p>
 <div class="grid">{edu_tiles}</div>
 </section>
 
 <section class="section" style="padding-top:0" aria-labelledby="expert-title">
-<h2 class="section-title" id="expert-title">Skills</h2>
+<h2 class="section-title brand-title" id="expert-title">{ic('sec_skill')}Skills</h2>
 <p class="section-sub">What I bring to a data or research project.</p>
 <div class="sk-grid">{skill_group_html}</div>
 </section>
 
 <section class="section" style="padding-top:0" aria-labelledby="skills-title">
-<h2 class="section-title" id="skills-title">Software</h2>
+<h2 class="section-title brand-title" id="skills-title">{ic('sec_soft')}Software</h2>
 <p class="section-sub">The tools I use in my everyday work.</p>
 <div class="skills">{skill_items}</div>
 </section>
 
 <section class="section" style="padding-top:0" aria-labelledby="awards-title">
 <div class="row-head">
-<h2 class="section-title" id="awards-title">Scholarships and awards</h2>
+<h2 class="section-title brand-title" id="awards-title">{ic('sec_award')}Scholarships and awards</h2>
 <span class="total">Total <b>CA${total:,}</b></span>
 </div>
 <ul class="awards">{award_items}</ul>
@@ -421,7 +427,7 @@ about = f'''<div class="wrap">
 
 <section class="section" style="padding-top:0" aria-labelledby="grants-title">
 <div class="row-head">
-<h2 class="section-title" id="grants-title">Research grants</h2>
+<h2 class="section-title brand-title" id="grants-title">{ic('sec_grant')}Research grants</h2>
 <span class="total">Total <b>CA${grant_total:,}</b></span>
 </div>
 <ul class="awards">{grant_items}</ul>
