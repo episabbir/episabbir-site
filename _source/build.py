@@ -381,7 +381,7 @@ about = f'''<div class="wrap">
 <h1 id="about-title">About me</h1>
 <p>As an epidemiologist at the Ministry of Health, Government of Saskatchewan, I work on childhood immunization surveillance. Since 2024, I have been measuring vaccine coverage, reporting to a federal agency and turning data into briefing notes that support decisions.</p>
 <p>I have more than six years of experience managing and analyzing large-scale administrative health data. I hold an MSc in Community and Population Health Science from the University of Saskatchewan, and I have published 38 peer-reviewed articles, 25 of them as lead author.</p>
-<p style="margin-top:18px"><a class="btn btn-primary" href="files/Md_Sabbir_Ahmed_CV.pdf?v={VER}" target="_blank" rel="noopener">{ic('download')} Download CV (PDF)</a></p>
+<p class="about-btns" style="margin-top:18px"><a class="btn btn-primary" href="files/Md_Sabbir_Ahmed_CV.pdf?v={VER}" target="_blank" rel="noopener">{ic('download')} Download CV (PDF)</a> <a class="btn btn-outline" href="research.html">{ic('doc')} My research {ic('arrow')}</a></p>
 </div>
 </section>
 
