@@ -232,7 +232,7 @@ home = f'''<div class="wrap">
 <a class="btn btn-primary" href="about.html">About me {ic('arrow')}</a>
 </div>
 </div>
-<div class="hero-photo"><img src="images/headshot-home.jpg?v={VER}" alt="Md Sabbir Ahmed"></div>
+<div class="hero-photo"><img src="images/headshot-home-sketch.jpg?v={VER}" alt="Md Sabbir Ahmed"></div>
 </section>
 
 <section class="section" id="latest" aria-labelledby="latest-title">
