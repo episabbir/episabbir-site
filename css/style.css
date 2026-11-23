@@ -1,5 +1,5 @@
 /* sabbirepi.ca shared styles */
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..800&family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   --ink:#10302e;
@@ -17,11 +17,11 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:#000;background:var(--ground);line-height:1.55}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#000;background:var(--ground);line-height:1.55}
 img{max-width:100%;display:block}
 a{color:#000}
 a:hover{color:#000}
-h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;line-height:1.15;margin:0}
+h1,h2,h3{font-family:'Lora',Georgia,serif;line-height:1.15;margin:0}
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 .section{padding:40px 0}
 .section-title{font-size:34px;font-weight:700;margin-bottom:6px}
@@ -98,7 +98,7 @@ h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;line-height:1.15;margin:0}
 
 /* logo slot: shows the image if the file exists, otherwise the text badge */
 .logo{position:relative;width:64px;height:64px;flex:none;border-radius:14px;background:#eaf2f0;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.logo .fallback{font-family:'Source Serif 4',Georgia,serif;font-weight:800;font-size:15px;color:#000;text-align:center;line-height:1.05;padding:4px}
+.logo .fallback{font-family:'Lora',Georgia,serif;font-weight:800;font-size:15px;color:#000;text-align:center;line-height:1.05;padding:4px}
 .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:6px}
 .logo.sm{width:28px;height:28px;border-radius:7px}
 .logo.sm .fallback{font-size:10px}
@@ -108,7 +108,7 @@ h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;line-height:1.15;margin:0}
 .tile{background:var(--card);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;text-align:left;font:inherit;color:#000}
 .tile h3{font-size:19px;font-weight:700}
 .tile .meta{margin:0;color:#000;font-size:15px}
-.tile .year{font-family:'Source Serif 4',Georgia,serif;font-weight:800;font-size:22px;color:#000}
+.tile .year{font-family:'Lora',Georgia,serif;font-weight:800;font-size:22px;color:#000}
 button.tile{cursor:pointer;width:100%}
 button.tile:hover{border-color:var(--accent)}
 .tile .hint{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#000}
@@ -128,9 +128,9 @@ button.tile:hover{border-color:var(--accent)}
 .awards .what{flex:1 1 auto;min-width:0}
 .awards .what strong{display:block;font-size:16px}
 .awards .what span{font-size:14px;color:#000}
-.awards .amt{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:18px;white-space:nowrap}
+.awards .amt{font-family:'Lora',Georgia,serif;font-weight:700;font-size:18px;white-space:nowrap}
 .total{display:inline-flex;align-items:baseline;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:10px 20px}
-.total b{font-family:'Source Serif 4',Georgia,serif;font-size:24px}
+.total b{font-family:'Lora',Georgia,serif;font-size:24px}
 
 /* software */
 .skills{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr))}
@@ -154,7 +154,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 /* research */
 .stats{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 22px}
 .stat{flex:1 1 140px;background:var(--ink);color:#fff;border-radius:18px;padding:16px 20px}
-.stat b{display:block;font-family:'Source Serif 4',Georgia,serif;font-size:36px;line-height:1.1}
+.stat b{display:block;font-family:'Lora',Georgia,serif;font-size:36px;line-height:1.1}
 .stat span{font-size:14px;color:#c6dbd8}
 .papers{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
 .paper{background:#fff;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:#000;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,48,46,.06);transition:transform .15s, box-shadow .15s;}
@@ -165,7 +165,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .paper-top .j{font-weight:700;letter-spacing:.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .paper-body{padding:16px 16px 12px;flex:1;display:flex;flex-direction:column;gap:10px}
 .paper-body .kind{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#000}
-.paper-body h3{font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.paper-body h3{font-family:'Inter',sans-serif;font-weight:700;font-size:15px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .paper-body .auth{font-size:12.5px;color:#000;margin:0}
 .paper-body .auth b{color:#000}
 .faux{display:flex;flex-direction:column;gap:5px;margin-top:auto;padding-top:8px}
@@ -212,7 +212,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .awards .what .report{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:14px;font-weight:700}
 .awards .what .report .icon{width:16px;height:16px}
 .awards li.feature{background:var(--peach);padding:22px}
-.awards li.feature .what strong{font-size:20px;font-family:'Source Serif 4',Georgia,serif}
+.awards li.feature .what strong{font-size:20px;font-family:'Lora',Georgia,serif}
 .awards li.feature .amt{font-size:24px;color:#000}
 .feat-ico{width:56px;height:56px;border-radius:14px;background:#10302e;color:#f2c94c}
 .feat-ico .icon{width:28px;height:28px}
@@ -264,7 +264,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .svc p{margin:0;color:#000;font-size:15px}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr))}
 .steps li{background:#fff;border-radius:var(--radius);padding:22px;display:flex;gap:14px;align-items:flex-start}
-.steps .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#f2c94c;font-family:'Source Serif 4',Georgia,serif;font-weight:800;display:flex;align-items:center;justify-content:center}
+.steps .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#f2c94c;font-family:'Lora',Georgia,serif;font-weight:800;display:flex;align-items:center;justify-content:center}
 .steps h3{font-size:17px;margin-bottom:4px}
 .steps p{margin:0;color:#000;font-size:14px}
 .indep{margin:8px 0 0;padding:16px 20px;background:var(--peach);border-radius:16px;color:#000;font-size:14px}
@@ -310,7 +310,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .menu-toggle{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer}
 @media (max-width:760px){
   .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-  .nav-here{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:18px}
+  .nav-here{font-family:'Lora',Georgia,serif;font-weight:700;font-size:18px}
   .site-nav ul{display:none;flex-direction:column;align-items:stretch;padding:4px 16px 14px;gap:4px}
   .site-nav.open ul{display:flex}
   .site-nav a{padding:12px 16px;font-size:16px}
