@@ -26,12 +26,12 @@ POSTS = [
             ('p', 'On top of tuition, you pay student fees. They cover things like health and dental insurance and a bus pass. For a full-time student on campus, they come to C$1,565.82 for 2026–27.'),
             ('h', 'Living costs'),
             ('p', 'To get a study permit, Canada asks you to show enough money to live on for one year. The amount depends on how many family members come with you. This is the lowest amount Canada accepts. Real costs, especially rent, can be higher.'),
-            ('h', 'Your bank statement at a glance'),
-            ('table', (['', 'Tuition (full program)', 'Student fees (2 years)', "Living costs (1 year, Canada's minimum)", 'Total to show', 'Total in BDT (at 1 CAD = 90 BDT)'], [
+            ('h', 'Minimum funds (bank statement) you need to show'),
+            ('table', (['', 'Tuition (full program)', 'Student fees (2 years)', "Living costs (1 year, Canada's minimum)", 'Total to show', 'Total in BDT'], [
                 ['Single student', 'C$39,937', 'C$3,132', 'C$23,448', 'about C$66,520', 'about BDT 59.9 lakh'],
                 ['Student + spouse', 'C$39,937', 'C$3,132', 'C$29,192', 'about C$72,260', 'about BDT 65.0 lakh'],
                 ['Student + spouse + 1 child', 'C$39,937', 'C$3,132', 'C$35,888', 'about C$78,960', 'about BDT 71.1 lakh']])),
-            ('note', "Note: These amounts are based on Canada's minimum for living costs in a study permit application. To be on the safe side, it's better to show some extra money."),
+            ('note', "Note: These amounts are based on Canada's minimum for living costs in a study permit application. To be on the safe side, it's better to show some extra money. Taka amounts use 1 CAD = 90 BDT. Exchange rates change every day, so convert the totals into your own currency at the current rate."),
             ('p', 'You will also pay for: university application fees, sending your documents, IELTS, your study permit (visa) fee, shopping before you leave, and your flight to Canada. Add these to your budget too.'),
             ('h', 'Check before you budget'),
             ('p', "I calculated these amounts in November 2026. Tuition, fees and the living cost amounts change almost every year. Before you make a plan, check the latest numbers on the USask tuition page and on Canada's proof of funds page. The links are below."),
