@@ -531,3 +531,8 @@ section[aria-labelledby="edu-title"] .tile .edu-thesis{grid-column:1 / -1}
 @font-face{font-family:'TeX Gyre Pagella';src:url(../fonts/pagella-bolditalic.woff) format('woff');font-weight:500 900;font-style:italic;font-display:swap}
 body{font-size:16.5px}
 button,input,select,textarea{font-family:inherit}
+
+/* 2026-11-23: Latest badge dot is red (text stays teal) */
+.latest-dot i{background:#e02424;animation-name:latestred}
+@keyframes latestred{0%{box-shadow:0 0 0 0 rgba(224,36,36,.7)}70%{box-shadow:0 0 0 9px rgba(224,36,36,0)}100%{box-shadow:0 0 0 0 rgba(224,36,36,0)}}
+@media (prefers-reduced-motion:reduce){.latest-dot i{animation:none}}
