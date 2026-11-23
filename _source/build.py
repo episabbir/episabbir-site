@@ -595,6 +595,11 @@ def body_html(blocks):
         if kind == 'h': out.append(f'<h2>{E(val)}</h2>')
         elif kind == 'p': out.append(f'<p>{E(val)}</p>')
         elif kind == 'ul': out.append('<ul>' + ''.join(f'<li>{E(i)}</li>' for i in val) + '</ul>')
+        elif kind == 'table':
+            hd, rows = val
+            out.append('<div class="post-table-wrap"><table class="post-table"><thead><tr>' + ''.join(f'<th>{E(c)}</th>' for c in hd) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<{"th scope=row" if j==0 else "td"}>{E(c)}</{"th" if j==0 else "td"}>' for j,c in enumerate(r)) + '</tr>' for r in rows) + '</tbody></table></div>')
+        elif kind == 'note': out.append(f'<p class="post-note">{E(val)}</p>')
+        elif kind == 'email': out.append(f'<p>{E(val[0])} <a href="mailto:{E(val[1])}">{E(val[1])}</a>.</p>')
     return '\n'.join(out)
 for i, p in enumerate(POSTS):
     pill = THEME_STYLE[p['theme']][0]
