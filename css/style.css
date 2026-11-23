@@ -1,5 +1,5 @@
 /* sabbirepi.ca shared styles */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root{
   --ink:#10302e;
@@ -17,7 +17,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#000;background:var(--ground);line-height:1.55}
+body{margin:0;font-family:'TeX Gyre Pagella','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;color:#000;background:var(--ground);line-height:1.55}
 img{max-width:100%;display:block}
 a{color:#000}
 a:hover{color:#000}
@@ -165,7 +165,7 @@ dialog::backdrop{background:rgba(16,48,46,.55)}
 .paper-top .j{font-weight:700;letter-spacing:.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .paper-body{padding:16px 16px 12px;flex:1;display:flex;flex-direction:column;gap:10px}
 .paper-body .kind{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#000}
-.paper-body h3{font-family:'Inter',sans-serif;font-weight:700;font-size:15px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.paper-body h3{font-family:'TeX Gyre Pagella','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;font-weight:700;font-size:15px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .paper-body .auth{font-size:12.5px;color:#000;margin:0}
 .paper-body .auth b{color:#000}
 .faux{display:flex;flex-direction:column;gap:5px;margin-top:auto;padding-top:8px}
@@ -523,3 +523,11 @@ section[aria-labelledby="edu-title"] .tile .edu-thesis{grid-column:1 / -1}
 .post-table tbody th{font-weight:600;background:#fafafa}
 .post-table td:nth-last-child(-n+2){font-weight:600}
 .post-note{font-size:15px;background:#f3f3f3;border-left:4px solid #0f766e;padding:10px 14px;border-radius:6px}
+
+/* 2026-11-23: text font = Palatino-style (TeX Gyre Pagella, self-hosted, GUST Font License) everywhere; headings stay Lora */
+@font-face{font-family:'TeX Gyre Pagella';src:url(../fonts/pagella-regular.woff) format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'TeX Gyre Pagella';src:url(../fonts/pagella-bold.woff) format('woff');font-weight:500 900;font-style:normal;font-display:swap}
+@font-face{font-family:'TeX Gyre Pagella';src:url(../fonts/pagella-italic.woff) format('woff');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'TeX Gyre Pagella';src:url(../fonts/pagella-bolditalic.woff) format('woff');font-weight:500 900;font-style:italic;font-display:swap}
+body{font-size:16.5px}
+button,input,select,textarea{font-family:inherit}
