@@ -539,3 +539,18 @@ button,input,select,textarea{font-family:inherit}
 
 /* 2026-11-24: About me skill tags in regular weight */
 .sk-tags li{font-weight:400}
+
+/* 2026-11-24: footer icons black; on hover/focus they turn their real brand colour */
+.contact-links a.icon-only:hover{opacity:1}
+.contact-links a.icon-only .brand-ic{transition:color .2s ease}
+.contact-links a.ic-mail:hover .brand-ic,.contact-links a.ic-mail:focus-visible .brand-ic{color:#EA4335}
+.contact-links a.ic-linkedin:hover .brand-ic,.contact-links a.ic-linkedin:focus-visible .brand-ic{color:#0A66C2}
+.contact-links a.ic-orcid:hover .brand-ic,.contact-links a.ic-orcid:focus-visible .brand-ic{color:#A6CE39}
+
+/* 2026-11-24: Facebook icon in the EpiTalk bar: black outline normally, Facebook blue on hover/focus */
+.fb-logo{background:transparent;border-radius:50%}
+.fb-ic{width:48px;height:48px;display:block}
+.fb-ic .fb-c{fill:#fff;stroke:#000;stroke-width:2;transition:fill .2s ease,stroke .2s ease}
+.fb-ic .fb-f{fill:#000;transition:fill .2s ease}
+.fb-strip:hover .fb-c,.fb-strip:focus-visible .fb-c{fill:#1877F2;stroke:#1877F2}
+.fb-strip:hover .fb-f,.fb-strip:focus-visible .fb-f{fill:#fff}
