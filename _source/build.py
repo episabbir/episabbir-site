@@ -195,8 +195,24 @@ def post_img(p, cls='post-img'):
     pill, bg, fg = THEME_STYLE[p['theme']]
     fit = ' fit-contain' if p.get('image_fit') == 'contain' else ''
     if p.get('thumb_bg'): bg = p['thumb_bg']
+    src = _thumb_img(p['image']) if cls == 'post-img' else f'images/blog/{p["image"]}'
     return (f'<div class="{cls}{fit}" style="background:{bg};color:{fg}">{ic("image")}'
-            f'<img src="images/blog/{p["image"]}?v={VER}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
+            f'<img src="{src}?v={VER}" alt="{E(p["image_alt"])}" onerror="this.remove()"></div>')
+
+def _thumb_img(image_name):
+    """Small copy (800px wide) of a post image for the post cards; made once, reused after."""
+    rel = f'images/blog/thumb/{image_name}'
+    src, dst = f'{OUT}/images/blog/{image_name}', f'{OUT}/{rel}'
+    try:
+        if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            with _PILImage.open(src) as im:
+                im = im.convert('RGB')
+                if im.width > 800: im = im.resize((800, round(im.height*800/im.width)), _PILImage.LANCZOS)
+                im.save(dst, 'JPEG', quality=84, optimize=True, progressive=True)
+        return rel
+    except Exception:
+        return f'images/blog/{image_name}'
 LATEST = '<span class="latest-dot"><i aria-hidden="true"></i>Latest</span>'
 def post_card(p, extra_cls='', data=True):
     pill = THEME_STYLE[p['theme']][0]
